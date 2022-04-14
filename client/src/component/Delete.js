@@ -26,12 +26,10 @@ export default class Delete extends Component {
 	}
 
 	handleChange(e) {
-		console.log('New value: ' + e.target.value)
 		this.setState({select: e.target.value})
 	}
 
 	submitForm() {
-		console.log('submit: ' + this.state.select)
 		axios.delete('http://localhost:9000/employee/'+this.state.select)
 		.then((res) => {
 			console.log('Employee successfully deleted!')
@@ -53,7 +51,6 @@ export default class Delete extends Component {
 							<select value={this.state.select} onChange={this.handleChange} className="custom-select mr-sm-2 col-12" id="empId" required>
 								<option disabled hidden value=''>Choose...</option>
 								{this.state.emp.map((e) => {
-									// console.log(e._id)
 									return (
 										<option value={e._id}>{e.name}</option>
 									)
