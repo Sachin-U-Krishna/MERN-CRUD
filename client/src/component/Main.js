@@ -49,17 +49,13 @@ export default class Main extends Component {
         axios.post('http://localhost:9000/employee', dataPost)
         .then(res => console.log(res.data))
         .catch((err) => {
-            this.setState({error: err},()=>console.log('Error hai' + err))
+            this.setState({error: err},()=>console.log('Error has occured.....' + err))
         })
         this.setState({
             name: '',
             position: '',
             salary: ''
         })
-    }
-
-    componentDidUpdate() {
-        console.log('updating............')
     }
 
     render() {
