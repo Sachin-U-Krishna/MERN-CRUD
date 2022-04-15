@@ -48,7 +48,7 @@ export default class Delete extends Component {
 					<div className="form-row align-items-center">
 						<div className="col-12 my-1">
 							<label className="mr-sm-2 sr-only" for="empId">Preference</label>
-							<select value={this.state.select} onChange={this.handleChange} className="custom-select mr-sm-2 col-12" id="empId" required>
+							<select value={this.state.select} onChange={this.handleChange} className="form-control custom-select mr-sm-2 col-12" id="empId" required>
 								<option disabled hidden value=''>Choose...</option>
 								{this.state.emp.map((e) => {
 									return (
